@@ -19,8 +19,11 @@ h1 {
         color: #583822;
         text-decoration: none;
     }
-    a, a:hover {
-        cursor: hand;
+    a, a:hover, a:-webkit-any-link:hover, a:-webkit-any-link:active {
+        cursor: pointer;
+    }
+    span:-webkit-any-link {
+        cursor: pointer;
     }
     span {
         display: inline-block;
