@@ -6,10 +6,26 @@ body, html {
 }
 
 h1 {
-    margin: 20px 50px;
+    margin: 20px;
     padding: 0;
     font-family: 'Condiment', cursive;
     font-weight: 400;
     font-size: 180px;
     color: #583822;
+    #tG {
+        padding-right: 4px;
+    }
+    #tK {
+        padding-right: 15px;
+    }
+    #tA {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    #tT1 {
+        padding-right: 3px;
+    }
+    #tT2 {
+        padding-right: 3px;
+    }
 }
