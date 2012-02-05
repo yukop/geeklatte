@@ -3,6 +3,9 @@ body, html {
   margin: 0;
   padding: 0; }
 
+a img {
+  border: 0; }
+
 h1 {
   margin: 20px;
   padding: 0;
@@ -10,6 +13,13 @@ h1 {
   font-weight: 400;
   font-size: 180px;
   color: #583822; }
+  h1 a {
+    color: #583822;
+    text-decoration: none; }
+  h1 a, h1 a:hover {
+    cursor: hand; }
+  h1 span {
+    display: inline-block; }
   h1 #tG {
     padding-right: 4px; }
   h1 #tK {

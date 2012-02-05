@@ -4,6 +4,9 @@ body, html {
     margin: 0;
     padding: 0;
 }
+a img {
+    border: 0;
+}
 
 h1 {
     margin: 20px;
@@ -12,6 +15,16 @@ h1 {
     font-weight: 400;
     font-size: 180px;
     color: #583822;
+    a {
+        color: #583822;
+        text-decoration: none;
+    }
+    a, a:hover {
+        cursor: hand;
+    }
+    span {
+        display: inline-block;
+    }
     #tG {
         padding-right: 4px;
     }
