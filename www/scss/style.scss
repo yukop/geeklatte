@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Condiment);
 @font-face {
+  font-family: 'AlteHaasGrotesk';
+  src: url('http://geeklatte.omase.com/font/AlteHaasGrotesk.ttf') format('truetype');
+}
+@font-face {
   font-family: 'AlteHaasGroteskBold';
   src: url('http://geeklatte.omase.com/font/AlteHaasGroteskBold.ttf') format('truetype');
 }
@@ -18,6 +22,12 @@ a img {
 
 .condiment {
     font-family: 'Condiment', cursive;
+}
+.altehaasgrotesk {
+    font-family: AlteHaasGrotesk, Arial, sans-serif;    
+}
+.altehaasgroteskbold {
+    font-family: AlteHaasGroteskBold, Arial, sans-serif;    
 }
 
 h1 {
@@ -54,33 +64,59 @@ h1 {
     }
 }
 
-figure {
-    margin: 15px auto;
+#latte {
     position: relative;
     width: 612px;
+    margin: 15px auto;
+    padding: 0;
     overflow: hidden;
 }
-
-
-figcaption {
+h1 {
     display: block;
     position: absolute;
     top: 40px;
     right: 0px;
+    margin: 0;
     padding: 0;
     background: #fff;
-    font-family: AlteHaasGroteskBold, Arial, sans-serif;
     font-size: 70px;
     font-weight: bold;
+    span {
+        display: block;
+        background: url(http://farm8.staticflickr.com/7033/6799064857_7a0b0fe0c8_o.jpg) 100% -40px;
+        padding: 0 7px;
+        line-height: 1.1;
+        color: #fff;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;        
+    }
 }
 
-figcaption span {
-    display: block;
-    background: url(http://farm8.staticflickr.com/7033/6799064857_7a0b0fe0c8_o.jpg) 100% -40px;
-    padding: 0 7px;
-    line-height: 1.1;
+p.msg {
+    font-family: AlteHaasGrotesk, Arial, sans-serif;
+    position: absolute;
+    top: 558px;
+    left: 8px;
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
     color: #fff;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 
+footer {
+    margin: 0 auto 40px;
+    padding: 0;
+    width: 612px;
+    font-size: 12px;
+    img {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    a {
+        text-decoration: none;
+        color: #666;
+    }
+    a:hover, a:active {
+        text-decoration: underline;
+    }
+}
