@@ -1,5 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Condiment);
 
+body {
+    font-family:'ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック','Osaka','メイリオ','Meiryo', Arial, sans-serif;    
+}
 body, html {
     margin: 0;
     padding: 0;
@@ -8,10 +11,13 @@ a img {
     border: 0;
 }
 
+.condiment {
+    font-family: 'Condiment', cursive;
+}
+
 h1 {
     margin: 20px;
     padding: 0;
-    font-family: 'Condiment', cursive;
     font-weight: 400;
     font-size: 180px;
     color: #583822;
@@ -19,10 +25,7 @@ h1 {
         color: #583822;
         text-decoration: none;
     }
-    a, a:hover, a:-webkit-any-link:hover, a:-webkit-any-link:active {
-        cursor: pointer;
-    }
-    span:-webkit-any-link {
+    a, a:-webkit-any-link {
         cursor: pointer;
     }
     span {
@@ -45,3 +48,33 @@ h1 {
         padding-right: 3px;
     }
 }
+
+figure {
+    margin: 15px auto;
+    position: relative;
+    width: 612px;
+    overflow: hidden;
+}
+
+
+figcaption {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    padding: 0;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+figcaption span {
+    display: block;
+    background: url(http://farm8.staticflickr.com/7033/6799064857_7a0b0fe0c8_o.jpg) 100% -40px;
+    padding: 0;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
