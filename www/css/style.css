@@ -1,4 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Condiment);
+@font-face {
+  font-family: 'AlteHaasGroteskBold';
+  src: url("http://geeklatte.omase.com/font/AlteHaasGroteskBold.ttf") format("truetype"); }
+
 body {
   font-family: 'ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック','Osaka','メイリオ','Meiryo', Arial, sans-serif; }
 
@@ -50,14 +54,15 @@ figcaption {
   right: 0px;
   padding: 0;
   background: #fff;
-  font-family: Arial, sans-serif;
+  font-family: AlteHaasGroteskBold, Arial, sans-serif;
   font-size: 70px;
   font-weight: bold; }
 
 figcaption span {
   display: block;
   background: url(http://farm8.staticflickr.com/7033/6799064857_7a0b0fe0c8_o.jpg) 100% -40px;
-  padding: 0;
+  padding: 0 7px;
+  line-height: 1.1;
   color: #fff;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; }
