@@ -7,15 +7,22 @@
   font-family: 'AlteHaasGroteskBold';
   src: url("http://geeklatte.omase.com/font/AlteHaasGroteskBold.ttf") format("truetype"); }
 
-body {
-  font-family: 'ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック','Osaka','メイリオ','Meiryo', Arial, sans-serif; }
-
-body, html {
+.reset, body, html, div, p, h1, footer, a img {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal; }
 
-a img {
-  border: 0; }
+body {
+  font-family: "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, verdana, "ＭＳ Ｐゴシック", sans-serif; }
+
+a, a:-webkit-any-link {
+  cursor: pointer; }
 
 .condiment {
   font-family: 'Condiment', cursive; }
@@ -27,16 +34,12 @@ a img {
   font-family: AlteHaasGroteskBold, Arial, sans-serif; }
 
 h1 {
-  margin: 20px;
-  padding: 0;
   font-weight: 400;
   font-size: 180px;
   color: #583822; }
   h1 a {
     color: #583822;
     text-decoration: none; }
-  h1 a, h1 a:-webkit-any-link {
-    cursor: pointer; }
   h1 span {
     display: inline-block; }
   h1 #tG {
@@ -55,7 +58,6 @@ h1 {
   position: relative;
   width: 612px;
   margin: 15px auto;
-  padding: 0;
   overflow: hidden; }
 
 h1 {
@@ -63,9 +65,7 @@ h1 {
   position: absolute;
   top: 40px;
   right: 0px;
-  margin: 0;
-  padding: 0;
-  background: #fff;
+  background: white;
   font-size: 70px;
   font-weight: bold; }
   h1 span {
@@ -73,7 +73,7 @@ h1 {
     background: url(http://farm8.staticflickr.com/7033/6799064857_7a0b0fe0c8_o.jpg) 100% -40px;
     padding: 0 7px;
     line-height: 1.1;
-    color: #fff;
+    color: white;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; }
 
@@ -82,14 +82,11 @@ p.msg {
   position: absolute;
   top: 558px;
   left: 8px;
-  margin: 0;
-  padding: 0;
   font-size: 28px;
   color: #fff; }
 
 footer {
   margin: 0 auto 40px;
-  padding: 0;
   width: 612px;
   font-size: 12px; }
   footer img {

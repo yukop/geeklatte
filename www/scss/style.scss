@@ -1,3 +1,15 @@
+
+//layout
+$latte-width: 612px;
+
+//color
+$white: #fff;
+$coffee: #583822;
+
+//font
+$sans: Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+$ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,verdana,'ＭＳ Ｐゴシック',sans-serif;
+
 @import url(http://fonts.googleapis.com/css?family=Condiment);
 @font-face {
   font-family: 'AlteHaasGrotesk';
@@ -8,18 +20,33 @@
   src: url('http://geeklatte.omase.com/font/AlteHaasGroteskBold.ttf') format('truetype');
 }
 
+//styles
+.reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	font-style: normal;
+	font-weight: normal;
+}
+
 
 body {
-    font-family:'ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック','Osaka','メイリオ','Meiryo', Arial, sans-serif;    
+    font-family: $ja-sans;   
 }
 body, html {
-    margin: 0;
-    padding: 0;
+    @extend .reset;
 }
-a img {
-    border: 0;
+div, p, h1, footer, a img {
+    @extend .reset;
 }
-
+a, a:-webkit-any-link {
+    cursor: pointer;
+}
+    
 .condiment {
     font-family: 'Condiment', cursive;
 }
@@ -31,17 +58,12 @@ a img {
 }
 
 h1 {
-    margin: 20px;
-    padding: 0;
     font-weight: 400;
     font-size: 180px;
-    color: #583822;
+    color: $coffee;
     a {
-        color: #583822;
+        color: $coffee;
         text-decoration: none;
-    }
-    a, a:-webkit-any-link {
-        cursor: pointer;
     }
     span {
         display: inline-block;
@@ -66,9 +88,8 @@ h1 {
 
 #latte {
     position: relative;
-    width: 612px;
+    width: $latte-width;
     margin: 15px auto;
-    padding: 0;
     overflow: hidden;
 }
 h1 {
@@ -76,9 +97,7 @@ h1 {
     position: absolute;
     top: 40px;
     right: 0px;
-    margin: 0;
-    padding: 0;
-    background: #fff;
+    background: $white;
     font-size: 70px;
     font-weight: bold;
     span {
@@ -86,7 +105,7 @@ h1 {
         background: url(http://farm8.staticflickr.com/7033/6799064857_7a0b0fe0c8_o.jpg) 100% -40px;
         padding: 0 7px;
         line-height: 1.1;
-        color: #fff;
+        color: $white;
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;        
     }
@@ -97,16 +116,13 @@ p.msg {
     position: absolute;
     top: 558px;
     left: 8px;
-    margin: 0;
-    padding: 0;
     font-size: 28px;
     color: #fff;
 }
 
 footer {
     margin: 0 auto 40px;
-    padding: 0;
-    width: 612px;
+    width: $latte-width;
     font-size: 12px;
     img {
         margin-right: 5px;
