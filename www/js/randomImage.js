@@ -4,7 +4,7 @@ function randomImage() {
 	var mainImage = document.getElementById('mainImage');
 	var mainImageClip = document.getElementById('mainImageClip');
 	var imgDir = 'img/';
-	var imgArray = new Array('droiko.jpg', 'gplus.jpg','mozc.jpg','octocat.jpg', 'sadchrome.jpg');
+	var imgArray = new Array('droiko.jpg','gplus.jpg','mozc.jpg','octocat.jpg','sadchrome.jpg','python.jpg','git.jpg','gopher.jpg','html5.jpg');
 	var imgIndex = 0;
 	
 	if(imgArray.length > 1) {
