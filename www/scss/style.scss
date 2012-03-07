@@ -56,6 +56,9 @@ div, p, h1, footer, a img {
 a, a:-webkit-any-link {
     cursor: pointer;
 }
+img {
+    vertical-align: bottom;
+}
 
 .gradientbg {
     background-color: $aulait;
@@ -111,7 +114,10 @@ h1 {
     width: $latte-width;
     margin: 15px auto;
     overflow: hidden;
+    border: 20px solid $white;
+    background-color: $white;
 }
+
 h1 {
     display: block;
     position: absolute;

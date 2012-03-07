@@ -24,6 +24,9 @@ body {
 a, a:-webkit-any-link {
   cursor: pointer; }
 
+img {
+  vertical-align: bottom; }
+
 .gradientbg {
   background-color: #f4ebd6;
   background: -moz-linear-gradient(315deg, white 25%, #f4ebd6 25%, #f4ebd6 50%, white 50%, white 75%, #f4ebd6 75%);
@@ -66,7 +69,9 @@ h1 {
   position: relative;
   width: 612px;
   margin: 15px auto;
-  overflow: hidden; }
+  overflow: hidden;
+  border: 20px solid white;
+  background-color: white; }
 
 h1 {
   display: block;
