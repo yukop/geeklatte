@@ -22,7 +22,8 @@ body {
   font-family: "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, verdana, "ＭＳ Ｐゴシック", sans-serif; }
 
 a, a:-webkit-any-link {
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 img {
   vertical-align: bottom; }

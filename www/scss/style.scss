@@ -55,6 +55,7 @@ div, p, h1, footer, a img {
 }
 a, a:-webkit-any-link {
     cursor: pointer;
+    text-decoration: none;
 }
 img {
     vertical-align: bottom;
