@@ -1,10 +1,15 @@
+//======================================
+// base
+//======================================
 
 //layout
 $latte-width: 612px;
 
 //color
-$white: #fff;
+$white: #ffffff;
 $coffee: #583822;
+$aulait: #f4ebd6; 
+$orange: #f8c992;
 
 //font
 $sans: Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
@@ -34,9 +39,14 @@ $ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kak
 }
 
 
+//======================================
+// styles
+//======================================
+
 body {
-    font-family: $ja-sans;   
+    font-family: $ja-sans;
 }
+    
 body, html {
     @extend .reset;
 }
@@ -46,7 +56,17 @@ div, p, h1, footer, a img {
 a, a:-webkit-any-link {
     cursor: pointer;
 }
-    
+
+.gradientbg {
+    background-color: $aulait;
+    background: -moz-linear-gradient(315deg, $white 25%, $aulait 25%, $aulait 50%, $white 50%, $white 75%, $aulait 75%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, $white), color-stop(0.25, $white), color-stop(0.25, $aulait), color-stop(0.50, $aulait), color-stop(0.50, $white), color-stop(0.75, $white), color-stop(0.75, $aulait), color-stop(1, $aulait));
+
+    -moz-background-size: 60px 60px;
+    -webkit-background-size: 60px 60px;
+    background-size: 60px 60px;
+}
+
 .condiment {
     font-family: 'Condiment', cursive;
 }
@@ -98,6 +118,8 @@ h1 {
     top: 40px;
     right: 0px;
     background: $white;
+    -webkit-border-top-left-radius: 4px;  
+    -webkit-border-bottom-left-radius: 4px;  
     font-size: 70px;
     font-weight: bold;
     span {
@@ -117,7 +139,7 @@ p.msg {
     top: 558px;
     left: 8px;
     font-size: 28px;
-    color: #fff;
+    color: $white;
 }
 
 footer {
