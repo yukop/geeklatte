@@ -65,7 +65,6 @@ img {
     background-color: $aulait;
     background: -moz-linear-gradient(315deg, $white 25%, $aulait 25%, $aulait 50%, $white 50%, $white 75%, $aulait 75%);
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0, $white), color-stop(0.25, $white), color-stop(0.25, $aulait), color-stop(0.50, $aulait), color-stop(0.50, $white), color-stop(0.75, $white), color-stop(0.75, $aulait), color-stop(1, $aulait));
-
     -moz-background-size: 60px 60px;
     -webkit-background-size: 60px 60px;
     background-size: 60px 60px;
@@ -131,7 +130,8 @@ h1 {
     font-weight: bold;
     span {
         display: block;
-        background: url(img/droiko.jpg) 100% -40px;
+        background-image: url(../img/droiko.jpg);
+        background-position: 100% -40px;
         padding: 0 7px;
         line-height: 1.1;
         color: $white;
