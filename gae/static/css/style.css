@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Condiment);
+@font-face {
+  font-family: 'AlteHaasGrotesk';
+  src: url("http://geeklatte.omase.com/font/AlteHaasGrotesk.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'AlteHaasGroteskBold';
+  src: url("http://geeklatte.omase.com/font/AlteHaasGroteskBold.ttf") format("truetype"); }
+
+.reset, body, html, div, p, h1, footer, a img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal; }
+
+body {
+  font-family: "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, verdana, "ＭＳ Ｐゴシック", sans-serif; }
+
+a, a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none; }
+
+img {
+  vertical-align: bottom; }
+
+.gradientbg {
+  background-color: #f4ebd6;
+  background: -moz-linear-gradient(315deg, white 25%, #f4ebd6 25%, #f4ebd6 50%, white 50%, white 75%, #f4ebd6 75%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, white), color-stop(0.25, white), color-stop(0.25, #f4ebd6), color-stop(0.5, #f4ebd6), color-stop(0.5, white), color-stop(0.75, white), color-stop(0.75, #f4ebd6), color-stop(1, #f4ebd6));
+  -moz-background-size: 60px 60px;
+  -webkit-background-size: 60px 60px;
+  background-size: 60px 60px; }
+
+.condiment {
+  font-family: 'Condiment', cursive; }
+
+.altehaasgrotesk {
+  font-family: AlteHaasGrotesk, Arial, sans-serif; }
+
+.altehaasgroteskbold {
+  font-family: AlteHaasGroteskBold, Arial, sans-serif; }
+
+h1 {
+  font-weight: 400;
+  font-size: 180px;
+  color: #583822; }
+  h1 a {
+    color: #583822;
+    text-decoration: none; }
+  h1 span {
+    display: inline-block; }
+  h1 #tG {
+    padding-right: 4px; }
+  h1 #tK {
+    padding-right: 15px; }
+  h1 #tA {
+    padding-left: 3px;
+    padding-right: 3px; }
+  h1 #tT1 {
+    padding-right: 3px; }
+  h1 #tT2 {
+    padding-right: 3px; }
+
+#latte {
+  position: relative;
+  width: 612px;
+  margin: 15px auto;
+  overflow: hidden;
+  border: 20px solid white;
+  background-color: white; }
+
+h1 {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  background: white;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  font-size: 70px;
+  font-weight: bold; }
+  h1 span {
+    display: block;
+    background-image: url(../img/droiko.jpg);
+    background-position: 100% -40px;
+    padding: 0 7px;
+    line-height: 1.1;
+    color: white;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
+
+p.msg {
+  font-family: AlteHaasGrotesk, Arial, sans-serif;
+  position: absolute;
+  top: 558px;
+  left: 8px;
+  font-size: 28px;
+  color: white; }
+
+footer {
+  margin: 0 auto 40px;
+  width: 612px;
+  font-size: 12px; }
+  footer img {
+    margin-right: 5px;
+    vertical-align: middle; }
+  footer a {
+    text-decoration: none;
+    color: #583822; }
+  footer a:hover, footer a:active {
+    text-decoration: underline; }
