@@ -22,6 +22,3 @@ function randomImage() {
 		return false;
 	}
 }
-
-window.onload = randomImage;
-
