@@ -19,7 +19,7 @@
   font-weight: normal; }
 
 .loading .hide-on-js {
-  visibility: hidden; }
+  opacity: 0; }
 
 body {
   font-family: "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, verdana, "ＭＳ Ｐゴシック", sans-serif; }
@@ -75,6 +75,12 @@ h1 {
     color: white;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; }
+
+#mainImage {
+  -webkit-transition-delay: 0;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear; }
 
 p.msg {
   font-family: AlteHaasGrotesk, Arial, sans-serif;

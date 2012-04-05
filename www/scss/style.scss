@@ -45,7 +45,7 @@ $ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kak
 
 .loading {
     .hide-on-js {
-        visibility: hidden;
+        opacity: 0;
     }
 }
 
@@ -86,35 +86,6 @@ img {
     font-family: AlteHaasGroteskBold, Arial, sans-serif;    
 }
 
-h1 {
-    font-weight: 400;
-    font-size: 180px;
-    color: $coffee;
-    a {
-        color: $coffee;
-        text-decoration: none;
-    }
-    span {
-        display: inline-block;
-    }
-    #tG {
-        padding-right: 4px;
-    }
-    #tK {
-        padding-right: 15px;
-    }
-    #tA {
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-    #tT1 {
-        padding-right: 3px;
-    }
-    #tT2 {
-        padding-right: 3px;
-    }
-}
-
 #latte {
     position: relative;
     width: $latte-width;
@@ -144,6 +115,12 @@ h1 {
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;        
     }
+}
+#mainImage {
+    -webkit-transition-delay: 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
 }
 
 p.msg {
