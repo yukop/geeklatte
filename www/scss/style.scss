@@ -95,11 +95,19 @@ img {
     background-color: $white;
 }
 
+.loading h1 {
+    right: -612px;
+    span {
+        background-position: 100% -40px; /* 下の画像に合わせてこれもスライドさせたいんだよォッッ逆方向にッッ */
+    }
+}
 h1 {
     display: block;
     position: absolute;
     top: 40px;
     right: 0px;
+    -webkit-transition: 0.3s;
+    
     background: $white;
     -webkit-border-top-left-radius: 4px;  
     -webkit-border-bottom-left-radius: 4px;  
