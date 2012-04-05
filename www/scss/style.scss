@@ -43,6 +43,12 @@ $ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kak
 // styles
 //======================================
 
+.loading {
+    .hide-on-js {
+        visibility: hidden;
+    }
+}
+
 body {
     font-family: $ja-sans;
 }

@@ -4,8 +4,11 @@ var randomImage = function () {
   var mainImage = document.getElementById('mainImage');
   var mainImageClip = document.getElementById('mainImageClip');
   var imgDir = 'img/';
-  var imgArray = new Array('droiko.jpg','gplus.jpg','mozc.jpg','octocat.jpg','sadchrome.jpg','python.jpg','git.jpg','gopher.jpg','html5.jpg');
+  var imgArray = new Array('droiko.jpg', 'gplus.jpg', 'mozc.jpg', 'octocat.jpg', 'sadchrome.jpg', 'python.jpg', 'git.jpg', 'gopher.jpg', 'html5.jpg');
   var imgIndex = 0;
+	
+	mainImage.style.background = 'white';
+	
   if(imgArray.length > 1) {
     while(imgIndex == lastIndex) {
       imgIndex = Math.floor(Math.random() * imgArray.length);
@@ -21,12 +24,13 @@ var randomImage = function () {
   }
 };
 
-var hideImage = function () {
-//  document.getElementById("mainImage").style.visiblity = "hidden";
+var setHtmlClass = function (classString) {
+  document.getElementsByTagName('html')[0].className = classString;
 };
 
+setHtmlClass('js loading');
 
 window.onload = function(){
   randomImage();
-//  hideImage();
+  setHtmlClass('js');
 }
