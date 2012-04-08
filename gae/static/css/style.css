@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Condiment);
 @font-face {
   font-family: 'AlteHaasGrotesk';
-  src: url("http://geeklatte.omase.com/font/AlteHaasGrotesk.ttf") format("truetype"); }
+  src: url("http://geeklatte.omase.com/font/AlteHaasGroteskRegular.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'AlteHaasGroteskBold';
@@ -17,6 +17,9 @@
   background: transparent;
   font-style: normal;
   font-weight: normal; }
+
+.loading .hide-on-js {
+  opacity: 0; }
 
 body {
   font-family: "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, verdana, "ＭＳ Ｐゴシック", sans-serif; }
@@ -45,27 +48,6 @@ img {
 .altehaasgroteskbold {
   font-family: AlteHaasGroteskBold, Arial, sans-serif; }
 
-h1 {
-  font-weight: 400;
-  font-size: 180px;
-  color: #583822; }
-  h1 a {
-    color: #583822;
-    text-decoration: none; }
-  h1 span {
-    display: inline-block; }
-  h1 #tG {
-    padding-right: 4px; }
-  h1 #tK {
-    padding-right: 15px; }
-  h1 #tA {
-    padding-left: 3px;
-    padding-right: 3px; }
-  h1 #tT1 {
-    padding-right: 3px; }
-  h1 #tT2 {
-    padding-right: 3px; }
-
 #latte {
   position: relative;
   width: 612px;
@@ -74,11 +56,18 @@ h1 {
   border: 20px solid white;
   background-color: white; }
 
+.loading h1 {
+  right: -612px; }
+  .loading h1 span {
+    background-position: 100% -40px;
+    /* 下の画像に合わせてこれもスライドさせたいんだよォッッ逆方向にッッ */ }
+
 h1 {
   display: block;
   position: absolute;
   top: 40px;
   right: 0px;
+  -webkit-transition: 0.3s;
   background: white;
   -webkit-border-top-left-radius: 4px;
   -webkit-border-bottom-left-radius: 4px;
@@ -93,6 +82,12 @@ h1 {
     color: white;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; }
+
+#mainImage {
+  -webkit-transition-delay: 0;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear; }
 
 p.msg {
   font-family: AlteHaasGrotesk, Arial, sans-serif;
