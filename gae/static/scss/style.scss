@@ -18,7 +18,7 @@ $ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kak
 @import url(http://fonts.googleapis.com/css?family=Condiment);
 @font-face {
   font-family: 'AlteHaasGrotesk';
-  src: url('http://geeklatte.omase.com/font/AlteHaasGrotesk.ttf') format('truetype');
+  src: url('http://geeklatte.omase.com/font/AlteHaasGroteskRegular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'AlteHaasGroteskBold';
@@ -42,6 +42,12 @@ $ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kak
 //======================================
 // styles
 //======================================
+
+.loading {
+    .hide-on-js {
+        opacity: 0;
+    }
+}
 
 body {
     font-family: $ja-sans;
@@ -80,35 +86,6 @@ img {
     font-family: AlteHaasGroteskBold, Arial, sans-serif;    
 }
 
-h1 {
-    font-weight: 400;
-    font-size: 180px;
-    color: $coffee;
-    a {
-        color: $coffee;
-        text-decoration: none;
-    }
-    span {
-        display: inline-block;
-    }
-    #tG {
-        padding-right: 4px;
-    }
-    #tK {
-        padding-right: 15px;
-    }
-    #tA {
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-    #tT1 {
-        padding-right: 3px;
-    }
-    #tT2 {
-        padding-right: 3px;
-    }
-}
-
 #latte {
     position: relative;
     width: $latte-width;
@@ -118,11 +95,19 @@ h1 {
     background-color: $white;
 }
 
+.loading h1 {
+    right: -612px;
+    span {
+        background-position: 100% -40px; /* 下の画像に合わせてこれもスライドさせたいんだよォッッ逆方向にッッ */
+    }
+}
 h1 {
     display: block;
     position: absolute;
     top: 40px;
     right: 0px;
+    -webkit-transition: 0.3s;
+    
     background: $white;
     -webkit-border-top-left-radius: 4px;  
     -webkit-border-bottom-left-radius: 4px;  
@@ -138,6 +123,12 @@ h1 {
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;        
     }
+}
+#mainImage {
+    -webkit-transition-delay: 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
 }
 
 p.msg {
