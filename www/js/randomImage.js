@@ -1,6 +1,5 @@
-var lastIndex = 0;
-
 var randomImage = function () {
+	var lastIndex = 0;
   var mainImage = document.getElementById('mainImage');
   var mainImageClip = document.getElementById('mainImageClip');
   var imgDir = 'img/';
@@ -17,19 +16,35 @@ var randomImage = function () {
     var imgPath = imgDir + imgArray[imgIndex];
     mainImage.src = imgPath;
     mainImage.alt = imgArray[imgIndex];
-		mainImage.onload = function(){setHtmlClass('js')}
+		mainImage.onload = function(){$('html').removeClass('loading')}
     mainImageClip.style.backgroundImage = "url(" + imgPath + ")";
   } else {
     return false;
   }
 };
 
-var setHtmlClass = function (classString) {
-  document.getElementsByTagName('html')[0].className = classString;
+// functionを 何を渡したら何が返ってくるか、の最小単位で作る
+// 1. make imgArray
+// 2. take imgIndex by random
+// 3. make img path, set it to img src and background
+// 4. removeClass 'loading'
+/*
+var makeImgArray = function(){};
+var takeImgIndex = function(){};
+var makeImgPath = function(){};
+var removeClass = function(){};
+*/
+
+var setHtmlClass = function() {
+	$('html').removeClass('no-js').addClass('js loading');
 };
+
+//$('#mainImage')
+//$('#mainImageClip')
 
 setHtmlClass('js loading');
 
-window.onload = function(){
-  randomImage();
-}
+$(document).ready(function(){
+	randomImage();
+});
+
