@@ -106,8 +106,7 @@ h1 {
     position: absolute;
     top: 40px;
     right: 0px;
-    -webkit-transition: 0.3s;
-    
+    -webkit-transition: 0.3s;   
     background: $white;
     -webkit-border-top-left-radius: 4px;  
     -webkit-border-bottom-left-radius: 4px;  
@@ -123,6 +122,12 @@ h1 {
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;        
     }
+}
+h1.siteTitle {
+   font-size: 70px; 
+}
+h1.entryTitle {
+    font-size: 24px;
 }
 #mainImage {
     -webkit-transition-delay: 0;

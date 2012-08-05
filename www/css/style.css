@@ -83,6 +83,12 @@ h1 {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; }
 
+h1.siteTitle {
+  font-size: 70px; }
+
+h1.entryTitle {
+  font-size: 24px; }
+
 #mainImage {
   -webkit-transition-delay: 0;
   -webkit-transition-property: opacity;
