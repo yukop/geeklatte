@@ -15,13 +15,15 @@ function getImageDataListFromJSON(json) {
 }
 
 function setImageList(anImageList) {
-	var contentBody = $('#contentBody');
 	var latte = $('.latte');
-
 	for (var i = 0, l = anImageList.length; i < l; i++) {
-		$(latte).clone(true).insertAfter(latte);
-		$('.entryImage').attr('src', anImageList[i].imageURL);
-		$('.entryTitle').text(anImageList[i].title);
+		cloneEntry(i);
+	};
+	function cloneEntry(listOrder) {
+		var clonedEntry = $(latte).clone(true);
+		clonedEntry.insertAfter(latte);
+		clonedEntry.children('.entryImageBlock').children('.entryImage').attr('src', anImageList[listOrder].imageURL);
+		clonedEntry.children('.entryTitle').text(anImageList[listOrder].title);	
 	}
 }
 
