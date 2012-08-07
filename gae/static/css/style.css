@@ -48,13 +48,31 @@ img {
 .altehaasgroteskbold {
   font-family: AlteHaasGroteskBold, Arial, sans-serif; }
 
-#latte {
+#latte, .latte {
   position: relative;
   width: 612px;
   margin: 15px auto;
   overflow: hidden;
   border: 20px solid white;
   background-color: white; }
+
+.entryImageBlock {
+  display: block;
+  overflow: hidden;
+  width: 612px;
+  height: 612px; }
+  .entryImageBlock .entryImage {
+    position: absolute;
+    top: -76px;
+    overflow: hidden; }
+
+.entryTitle {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  overflow: visible;
+  color: white; }
 
 .loading h1 {
   right: -612px; }
@@ -82,6 +100,12 @@ h1 {
     color: white;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; }
+
+h1.siteTitle {
+  font-size: 70px; }
+
+h1.entryTitle {
+  font-size: 24px; }
 
 #mainImage {
   -webkit-transition-delay: 0;
