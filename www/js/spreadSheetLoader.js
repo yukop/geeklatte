@@ -22,8 +22,8 @@ function setImageList(anImageList) {
 	function cloneEntry(listOrder) {
 		var clonedEntry = $(latte).clone(true);
 		clonedEntry.insertAfter(latte);
-		clonedEntry.children('.entryImageBlock').children('.entryImage').attr('src', anImageList[listOrder].imageURL);
-		clonedEntry.children('.entryTitle').text(anImageList[listOrder].title);	
+		clonedEntry.find('.entryImage').attr('src', anImageList[listOrder].imageURL);
+		clonedEntry.find('.entryTitle').text(anImageList[listOrder].title);	
 	}
 }
 
