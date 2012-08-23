@@ -1,12 +1,14 @@
 
 function getImageDataListFromJSON(json) {
 	var imageDataList = [];
-	for (var i = 0, l = json.feed.entry.length; i < l; i = i + 2) {
+	for (var i = 0, l = json.feed.entry.length; i < l; i = i + 3) {
 		var thisTitle = json.feed.entry[i].content.$t;
 		var thisImageURL = json.feed.entry[i + 1].content.$t;
+		var thisEntryURL = json.feed.entry[i + 2].content.$t;
 		var imageData = {
 			title: thisTitle,
-			imageURL: thisImageURL
+			imageURL: thisImageURL,
+			entryURL: thisEntryURL
 		};
 		imageDataList.push(imageData);
 	}
@@ -25,10 +27,10 @@ function setImageList(anImageList) {
 		clonedEntry.insertAfter(latte);
 		clonedEntry.find('.entryImage').attr('src', anImageList[listOrder].imageURL);
 		clonedEntry.find('.entryTitle').text(anImageList[listOrder].title);
+		clonedEntry.find('.entryUrl').attr('href', anImageList[listOrder].entryURL);
 		console.log(clonedEntry);
 		return clonedEntry;
 	}
-//	$('#contentBody :first').hide();
 	$('.latte').first().hide();
 	//$('.latte').last().hide(); 
 }

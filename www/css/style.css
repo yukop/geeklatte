@@ -58,11 +58,13 @@ img {
 
 .entryImageBlock {
   display: block;
+  position: relative;
   overflow: hidden;
   width: 612px;
   height: 612px; }
   .entryImageBlock .entryImage {
     position: absolute;
+    overflow: hidden;
     top: -76px;
     overflow: hidden; }
 
@@ -73,6 +75,12 @@ img {
   left: 10px;
   overflow: visible;
   color: white; }
+
+.plusoneButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  overflow: visible; }
 
 .loading h1 {
   right: -612px; }

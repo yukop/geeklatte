@@ -97,11 +97,13 @@ img {
 
 .entryImageBlock {
     display: block;
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
     width: $latte-width;
     height: $latte-width;
     .entryImage {
         position: absolute;
+        overflow: hidden;
         top: -76px;
         overflow: hidden; 
     }
@@ -115,7 +117,12 @@ img {
     overflow: visible;
     color: $white;
 }
-
+.plusoneButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    overflow: visible;
+}
 .loading h1 {
     right: -612px;
     span {
