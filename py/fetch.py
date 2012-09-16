@@ -63,3 +63,5 @@ latest5 = json.dumps(photoset)
 tosaveJson = open('../www/js/latestEntries.json', 'w')
 tosaveJson.write(latest5)
 tosaveJson.close
+
+# test
