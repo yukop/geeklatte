@@ -5,7 +5,7 @@ import urllib2
 import json
 import apikey
 
-URL = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey.APIKEY + '&photoset_id=72157628494205581&extras=url_o%2C+url_m&format=json&nojsoncallback=1'
+URL = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey.APIKEY + '&photoset_id=72157628494205581&extras=url_o%2C+url_m%2C+url_l&format=json&nojsoncallback=1'
 
 f = urllib2.urlopen(URL)
 data = f.read()
@@ -41,6 +41,7 @@ footer = u'''
 </html>
 '''
 
+# all items for archives.html
 tosave = open('../www/archives.html', 'w')
 tosave.write(header.encode('utf-8'))
 for photo in photos:
@@ -54,3 +55,11 @@ for photo in photos:
   tosave.write(photo_entry.encode('utf-8'))
 tosave.write(footer)
 tosave.close
+
+# latest 5 items for index.html
+del photos[5:len(photos)]
+latest5 = json.dumps(photoset)
+
+tosaveJson = open('../www/js/latestEntries.json', 'w')
+tosaveJson.write(latest5)
+tosaveJson.close

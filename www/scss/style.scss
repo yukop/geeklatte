@@ -38,9 +38,8 @@ $ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kak
 	font-weight: normal;
 }
 
-
 //======================================
-// styles
+// styles associated with JavaScript
 //======================================
 
 .loading {
@@ -48,6 +47,17 @@ $ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kak
         opacity: 0;
     }
 }
+.loading h1 {
+    right: -612px;
+    span {
+        background-position: 100% -40px;
+    }
+}
+
+//======================================
+// styles
+//======================================
+
 
 body {
     font-family: $ja-sans;
@@ -117,18 +127,8 @@ img {
     overflow: visible;
     color: $white;
 }
-.plusoneButton {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    overflow: visible;
-}
-.loading h1 {
-    right: -612px;
-    span {
-        background-position: 100% -40px; /* 下の画像に合わせてこれもスライドさせたいんだよォッッ逆方向にッッ */
-    }
-}
+
+
 h1 {
     display: block;
     position: absolute;

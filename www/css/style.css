@@ -21,6 +21,11 @@
 .loading .hide-on-js {
   opacity: 0; }
 
+.loading h1 {
+  right: -612px; }
+  .loading h1 span {
+    background-position: 100% -40px; }
+
 body {
   font-family: "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, verdana, "ＭＳ Ｐゴシック", sans-serif; }
 
@@ -75,18 +80,6 @@ img {
   left: 10px;
   overflow: visible;
   color: white; }
-
-.plusoneButton {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  overflow: visible; }
-
-.loading h1 {
-  right: -612px; }
-  .loading h1 span {
-    background-position: 100% -40px;
-    /* 下の画像に合わせてこれもスライドさせたいんだよォッッ逆方向にッッ */ }
 
 h1 {
   display: block;
