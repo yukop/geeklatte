@@ -57,11 +57,9 @@ tosave.write(footer)
 tosave.close
 
 # latest 5 items for index.html
-del photos[5:len(photos)]
-latest5 = json.dumps(photoset)
+del photos[10:len(photos)]
+latest10 = json.dumps(photoset)
 
 tosaveJson = open('../www/js/latestEntries.json', 'w')
-tosaveJson.write(latest5)
+tosaveJson.write(latest10)
 tosaveJson.close
-
-# test

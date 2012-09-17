@@ -55,7 +55,8 @@ img {
 
 #latte, .latte {
   position: relative;
-  width: 612px;
+  width: 768px;
+  height: 768px;
   margin: 15px auto;
   overflow: hidden;
   border: 20px solid white;
@@ -64,9 +65,8 @@ img {
 .entryImageBlock {
   display: block;
   position: relative;
-  overflow: hidden;
-  width: 612px;
-  height: 612px; }
+  top: -128px;
+  overflow: hidden; }
   .entryImageBlock .entryImage {
     position: absolute;
     overflow: hidden;
@@ -95,7 +95,8 @@ h1 {
   h1 span {
     display: block;
     background-image: url(../img/droiko.jpg);
-    background-position: 100% -40px;
+    background-position: 100% 856px;
+    /* 1024-128-40 */
     padding: 0 7px;
     line-height: 1.1;
     color: white;
@@ -124,7 +125,7 @@ p.msg {
 
 footer {
   margin: 0 auto 40px;
-  width: 612px;
+  width: 768px;
   font-size: 12px; }
   footer img {
     margin-right: 5px;

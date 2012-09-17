@@ -24,7 +24,7 @@ function setRandomNum(entryList) {
 }
 
 function setMainImage(latestEntries, indexNum){
-	$('#mainImageLink').attr('href', latestEntries.entryUrlList[indexNum]);
+//	$('#mainImageLink').attr('href', latestEntries.entryUrlList[indexNum]);
 	$('#mainImage').attr('src', latestEntries.largeImageUrlList[indexNum]);
 	$('#mainImage').attr('alt', latestEntries.titleList[indexNum]);
 	mainImage.onload = function(){$('html').removeClass('loading')}
