@@ -3,9 +3,10 @@
 
 import urllib2
 import json
+import re
 import apikey
 
-URL = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey.APIKEY + '&photoset_id=72157628494205581&extras=url_o%2C+url_m%2C+url_l&format=json&nojsoncallback=1'
+URL = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey.APIKEY + '&photoset_id=72157628494205581&extras=date_taken%2C+url_o%2C+url_l%2C+url_m&format=json&nojsoncallback=1'
 
 f = urllib2.urlopen(URL)
 data = f.read()
@@ -17,7 +18,7 @@ photos.reverse()
 entry = u'''
 <div class="latte">
 <a href="http://www.flickr.com/photos/%(ownername)s/%(photo_id)s/in/set-%(photoset_id)s/" target="_blank" class="entryUrl"><img src="%(image_url)s" class="entryImage" alt="geeklatte"></a>
-<p class="entryTitle">%(entry_title)s</p>
+<p class="entryTitle">%(entry_title)s / %(datetaken)s</p>
 </div>
 '''
 header = u'''
@@ -51,6 +52,7 @@ for photo in photos:
     'photo_id': photo['id'],
     'image_url': photo['url_m'],
     'entry_title': photo['title'],
+    'datetaken': re.sub('\s\d\d:\d\d:\d\d', '', photo['datetaken'],)
     }
   tosave.write(photo_entry.encode('utf-8'))
 tosave.write(footer)

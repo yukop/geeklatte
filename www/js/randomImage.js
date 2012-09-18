@@ -28,7 +28,7 @@ function setMainImage(latestEntries, indexNum){
 	$('#mainImage').attr('src', latestEntries.largeImageUrlList[indexNum]);
 	$('#mainImage').attr('alt', latestEntries.titleList[indexNum]);
 	mainImage.onload = function(){$('html').removeClass('loading')}
-	$('#mainImageClip').css("background-image", 'url(' + latestEntries.largeImageUrlList[indexNum] + ')');	
+//	$('#mainImageClip').css("background-image", 'url(' + latestEntries.largeImageUrlList[indexNum] + ')');	
 };
 
 
