@@ -17,7 +17,7 @@ photos.reverse()
 
 entry = u'''
 <div class="latte">
-<a href="http://www.flickr.com/photos/%(ownername)s/%(photo_id)s/in/set-%(photoset_id)s/" target="_blank" class="entryUrl"><img src="%(image_url)s" class="entryImage" alt="geeklatte"></a>
+<a href="http://www.flickr.com/photos/%(ownername)s/%(photo_id)s/in/set-%(photoset_id)s/" target="_blank" class="entryUrl"><img src="%(image_url)s" class="entryImage" alt="%(entry_title)s"></a>
 <p class="entryTitle">%(entry_title)s / %(datetaken)s</p>
 </div>
 '''
