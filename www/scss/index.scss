@@ -137,6 +137,9 @@ body, html {
 		width: $latte-size;
 	}
 }
+.latte:hover {
+  box-shadow: 0 0 3px 1px $coffee;
+}
 .entryImage {
 	position: absolute;
 }
@@ -210,7 +213,7 @@ form.search {
 
 .socialLink {
   float: left;
-  margin: 0;
+  margin: 10px 0 0;
   padding: 0;
   li {
     margin: 0;

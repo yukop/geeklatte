@@ -110,6 +110,10 @@ body {
   width: 160px;
 }
 
+.latte:hover {
+  box-shadow: 0 0 3px 1px #583822;
+}
+
 .entryImage {
   position: absolute;
 }
@@ -182,7 +186,7 @@ form.search input {
 
 .socialLink {
   float: left;
-  margin: 0;
+  margin: 10px 0 0;
   padding: 0;
 }
 .socialLink li {
