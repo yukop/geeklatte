@@ -1,0 +1,211 @@
+@import url(http://fonts.googleapis.com/css?family=Condiment);
+@import url(http://fonts.googleapis.com/css?family=Niconne);
+@import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
+@font-face {
+  font-family: 'AlteHaasGrotesk';
+  src: url("http://geeklatte.com/font/AlteHaasGroteskRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'AlteHaasGroteskBold';
+  src: url("http://geeklatte.com/font/AlteHaasGroteskBold.ttf") format("truetype");
+}
+
+.reset, div, p, h1, footer, a img, body, html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.cf:before, .body:before, .footer:before,
+.cf:after,
+.body:after,
+.footer:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after, .body:after, .footer:after {
+  clear: both;
+}
+
+.cf, .body, .footer {
+  *zoom: 1;
+}
+
+/* base elements */
+a, a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* base layout */
+.loading .hide-on-js {
+  opacity: 0;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, verdana, "ＭＳ Ｐゴシック", sans-serif;
+  font-size: small;
+  color: #583822;
+  margin: 2px;
+}
+
+.body {
+  max-width: 1020px;
+  margin: 0 auto;
+  posigion: relative;
+}
+
+.gradientbg {
+  background-color: #f4ebd6;
+  background: -moz-linear-gradient(315deg, white 25%, #f4ebd6 25%, #f4ebd6 50%, white 50%, white 75%, #f4ebd6 75%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, white), color-stop(0.25, white), color-stop(0.25, #f4ebd6), color-stop(0.5, #f4ebd6), color-stop(0.5, white), color-stop(0.75, white), color-stop(0.75, #f4ebd6), color-stop(1, #f4ebd6));
+  -moz-background-size: 60px 60px;
+  -webkit-background-size: 60px 60px;
+  background-size: 60px 60px;
+}
+
+/* latte layout */
+.largelatte {
+  position: relative;
+  float: left;
+  width: 604px;
+  height: 604px;
+  margin: 4px;
+  padding: 0;
+  overflow: hidden;
+}
+.largelatte .entryImage {
+  top: -27px;
+  width: 604px;
+}
+
+.latte {
+  position: relative;
+  float: left;
+  width: 160px;
+  height: 160px;
+  margin: 4px;
+  border: 1px solid #f4ebd6 !important;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background-color: white;
+}
+.latte .entryImage {
+  top: -27px;
+  width: 160px;
+}
+
+.entryImage {
+  position: absolute;
+}
+
+.entryTitle {
+  position: absolute;
+  margin: 0;
+  padding: 0 5px 0 0;
+  bottom: 5px;
+  left: 5px;
+  color: white;
+  font-size: x-small;
+}
+
+.contentUnit {
+  float: left;
+  width: 480px;
+  margin-left: 20px;
+}
+
+.footer {
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 1020px;
+  background-color: white;
+}
+
+/* text elements */
+.niconne {
+  font-family: 'Niconne', cursive;
+}
+
+.berkshire, .title {
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.condiment {
+  font-family: 'Condiment', cursive;
+}
+
+.altehaasgrotesk {
+  font-family: AlteHaasGrotesk, Arial, sans-serif;
+}
+
+.altehaasgroteskbold, .pageTitle {
+  font-family: AlteHaasGroteskBold, Arial, sans-serif;
+}
+
+.pageTitle {
+  position: absolute;
+  top: -40px;
+  z-index: -1;
+  font-size: 120px;
+  color: #583822;
+}
+
+form.search {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 4px;
+  text-align: right;
+}
+form.search input {
+  padding: 4px;
+  width: 150px;
+  border: 1px solid #f4ebd6;
+  color: #583822;
+  font-size: large;
+}
+
+.socialLink {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.socialLink li {
+  margin: 0;
+  padding: 0 10px 0 0;
+  list-style: none;
+  float: left;
+}
+.socialLink a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  text-indent: -1000px;
+}
+.socialLink #gh {
+  background: url(../img/social-icons.png) 0 0 no-repeat;
+}
+.socialLink #fr {
+  background: url(../img/social-icons.png) 0 -96px no-repeat;
+}
+.socialLink #tw {
+  background: url(../img/social-icons.png) 0 -64px no-repeat;
+}
+.socialLink #gp {
+  background: url(../img/social-icons.png) 0 -32px no-repeat;
+}

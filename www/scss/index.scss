@@ -1,0 +1,239 @@
+//======================================
+// base
+//======================================
+
+//layout
+$large-latte-size: 604px;
+$latte-size: 160px;
+$latte-margin: 4px;
+$m1: 20px;
+$body-width: ($latte-size * 6) + ($latte-margin * 12) + 12;
+$content-unit-width: ($body-width - ($m1 * 3)) / 2;
+
+//color
+$white: #ffffff;
+$coffee: #583822;
+$aulait: #f4ebd6; 
+$orange: #f8c992;
+
+//font
+$sans: Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+$ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,verdana,'ＭＳ Ｐゴシック',sans-serif;
+$mono: monospace;
+
+@import url(http://fonts.googleapis.com/css?family=Condiment);
+@import url(http://fonts.googleapis.com/css?family=Niconne);
+@import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
+@font-face {
+  font-family: 'AlteHaasGrotesk';
+  src: url('http://geeklatte.com/font/AlteHaasGroteskRegular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'AlteHaasGroteskBold';
+  src: url('http://geeklatte.com/font/AlteHaasGroteskBold.ttf') format('truetype');
+}
+
+//styles
+.reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+//======================================
+// styles
+//======================================
+/* base elements */
+div, p, h1, footer, a img {
+  @extend .reset;
+}
+a, a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+img {
+  vertical-align: bottom;
+}
+
+/* base layout */
+
+.loading {
+  .hide-on-js {
+      opacity: 0;
+  }
+}
+
+body {
+  font-family: $ja-sans;
+  font-size: small;
+  color: $coffee;
+	margin: 2px;
+}
+    
+body, html {
+  @extend .reset;
+}
+.body {
+  @extend .cf;
+  max-width: $body-width;
+  margin: 0 auto;
+  posigion: relative;
+}
+.gradientbg {
+  background-color: $aulait;
+  background: -moz-linear-gradient(315deg, $white 25%, $aulait 25%, $aulait 50%, $white 50%, $white 75%, $aulait 75%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, $white), color-stop(0.25, $white), color-stop(0.25, $aulait), color-stop(0.50, $aulait), color-stop(0.50, $white), color-stop(0.75, $white), color-stop(0.75, $aulait), color-stop(1, $aulait));
+  -moz-background-size: 60px 60px;
+  -webkit-background-size: 60px 60px;
+  background-size: 60px 60px;
+}
+
+/* latte layout */
+
+.largelatte {
+	position: relative;
+	float: left;
+	width: $large-latte-size;
+	height: $large-latte-size;
+	margin: $latte-margin;
+	padding: 0;
+	overflow: hidden;
+	.entryImage {
+		top: round(-$latte-size/6);
+		width: $large-latte-size;
+	}
+}
+.latte{
+	position: relative;
+	float: left;
+	width: $latte-size;
+	height: $latte-size;
+	margin: $latte-margin;
+  border: 1px solid $aulait !important;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	background-color: $white;
+	.entryImage {
+		top: round(-$latte-size/6);
+		width: $latte-size;
+	}
+}
+.entryImage {
+	position: absolute;
+}
+.entryTitle {
+	position: absolute;
+	margin: 0;
+	padding: 0 5px 0 0;
+	bottom: 5px;
+	left: 5px;
+	color: $white;
+	font-size: x-small;
+}	
+
+.contentUnit {
+  float: left;
+  width: $content-unit-width;
+  margin-left: $m1;
+}
+.footer {
+  margin: $m1 auto;
+  padding: $m1 0;
+  width: $body-width;
+  background-color: $white;
+  @extend .cf;
+}
+
+
+/* text elements */
+.niconne {
+  font-family: 'Niconne', cursive;
+}
+.berkshire {
+  font-family: 'Berkshire Swash', cursive;
+}
+.condiment {
+  font-family: 'Condiment', cursive;
+}
+.altehaasgrotesk {
+  font-family: AlteHaasGrotesk, Arial, sans-serif;    
+}
+.altehaasgroteskbold {
+  font-family: AlteHaasGroteskBold, Arial, sans-serif;    
+}
+
+.pageTitle {  
+  position: absolute;
+  top: -40px;
+  z-index: -1;
+  @extend .altehaasgroteskbold;
+  font-size: 120px;
+  color: $coffee;
+}
+
+form.search {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: $latte-margin;
+  text-align: right;
+  input{
+    padding: $latte-margin;
+    width: $latte-size - ($latte-margin * 2) - 2;
+    border: 1px solid $aulait;
+    color: $coffee;
+    font-size: large;
+  }
+}
+
+.title {
+  @extend .berkshire;
+}
+
+.socialLink {
+  float: left;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0 10px 0 0;
+    list-style: none;
+    float: left;
+  }
+  a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-indent: -1000px;
+  }
+  #gh {
+    background: url(../img/social-icons.png) 0 0 no-repeat;
+  }
+  #fr {
+    background: url(../img/social-icons.png) 0 -96px no-repeat;
+  }
+  #tw {
+    background: url(../img/social-icons.png) 0 -64px no-repeat;
+  }
+  #gp {
+    background: url(../img/social-icons.png) 0 -32px no-repeat;
+  }
+}
