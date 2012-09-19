@@ -63,6 +63,11 @@ $mono: monospace;
 .cf {
     *zoom: 1;
 }
+.hide {
+  display: block;
+  position: absolute;
+  text-indent: -1000px;
+}
 
 //======================================
 // styles

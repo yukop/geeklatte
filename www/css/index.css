@@ -41,6 +41,12 @@
   *zoom: 1;
 }
 
+.hide {
+  display: block;
+  position: absolute;
+  text-indent: -1000px;
+}
+
 /* base elements */
 a, a:-webkit-any-link {
   cursor: pointer;
