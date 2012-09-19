@@ -137,7 +137,7 @@ body {
 .footer {
   margin: 20px auto;
   padding: 20px 0;
-  width: 1020px;
+  max-width: 1020px;
   background-color: white;
 }
 
@@ -184,6 +184,38 @@ form.search input {
   font-size: large;
 }
 
+@media (max-width: 320px) {
+  .pageTitle {
+    position: static !important;
+    font-size: 40px !important;
+  }
+
+  form.search {
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .latte {
+    width: 146px;
+    height: 146px;
+  }
+  .latte .entryImage {
+    top: -24px;
+    width: 146px;
+  }
+}
+@media (min-width: 321px) and (max-width: 680px) {
+  .pageTitle {
+    position: static !important;
+    margin: 0;
+    font-size: 72px !important;
+  }
+
+  form.search {
+    margin: 0 !important;
+    text-align: left !important;
+  }
+}
 .socialLink {
   float: left;
   margin: 10px 0 0;

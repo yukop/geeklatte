@@ -7,7 +7,13 @@ $large-latte-size: 604px;
 $latte-size: 160px;
 $latte-margin: 4px;
 $m1: 20px;
-$body-width: ($latte-size * 6) + ($latte-margin * 12) + 12;
+$b1: 1px;
+$body-width: ($latte-size * 6) + ($latte-margin * 12) + ($b1 * 12);
+$latte1: $latte-size;
+$latte2: ($latte-size * 2) + ($latte-margin * 4) + ($b1 * 4);
+$latte3: ($latte-size * 3) + ($latte-margin * 6) + ($b1 * 6);
+$latte4: ($latte-size * 4) + ($latte-margin * 8) + ($b1 * 8);
+$latte5: ($latte-size * 5) + ($latte-margin * 10) + ($b1 * 10);
 $content-unit-width: ($body-width - ($m1 * 3)) / 2;
 
 //color
@@ -161,7 +167,7 @@ body, html {
 .footer {
   margin: $m1 auto;
   padding: $m1 0;
-  width: $body-width;
+  max-width: $body-width;
   background-color: $white;
   @extend .cf;
 }
@@ -192,7 +198,6 @@ body, html {
   font-size: 120px;
   color: $coffee;
 }
-
 form.search {
   margin-top: 10px;
   margin-bottom: 30px;
@@ -204,6 +209,38 @@ form.search {
     border: 1px solid $aulait;
     color: $coffee;
     font-size: large;
+  }
+}
+
+@media (max-width: 320px) {
+  .pageTitle {
+    position: static !important;
+    font-size: 40px !important;
+  }
+  form.search {
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  $latte-size: 146px;
+  .latte {
+    width: $latte-size;
+    height: $latte-size;
+    .entryImage {
+      top: round(-$latte-size/6);
+      width: $latte-size;
+    }
+  }
+}
+
+@media (min-width: 321px) and (max-width: 680px){
+  .pageTitle {
+    position: static !important;
+    margin: 0;
+    font-size: 72px !important;
+  }
+  form.search {
+    margin: 0 !important;
+    text-align: left !important;
   }
 }
 
