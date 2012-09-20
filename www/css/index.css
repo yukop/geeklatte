@@ -182,6 +182,11 @@ form.search {
   padding: 4px;
   text-align: right;
 }
+form.search input::-webkit-input-placeholder,
+form.search input:-moz-placeholder,
+form.search input[placeholder] {
+  color: #f4ebd6;
+}
 form.search input {
   padding: 4px;
   width: 150px;

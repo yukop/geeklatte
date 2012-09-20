@@ -208,6 +208,11 @@ form.search {
   margin-bottom: 30px;
   padding: $latte-margin;
   text-align: right;
+  input::-webkit-input-placeholder, 
+  input:-moz-placeholder, 
+  input[placeholder] {
+    color: $aulait;
+  }
   input{
     padding: $latte-margin;
     width: $latte-size - ($latte-margin * 2) - 2;
