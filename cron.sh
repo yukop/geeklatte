@@ -1,3 +1,3 @@
 #!/bin/sh
-/usr/local/bin/python /virtual/yukop/py/fetch.py
+/usr/bin/python py/fetch.py
 exit
