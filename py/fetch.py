@@ -83,7 +83,7 @@ This is why I make this series of "geek" latte art.
 '''
 
 # all items for index.html
-tosave = open('./public_html/index.html', 'w')
+tosave = open('../public_html/index.html', 'w')
 #tosave = open('../www/index.html', 'w')
 tosave.write(header.encode('utf-8'))
 for photo in photos:
