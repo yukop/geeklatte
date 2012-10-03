@@ -83,9 +83,8 @@ This is why I make this series of "geek" latte art.
 '''
 
 # all items for index.html
-tosave = open('../public_html/index.html', 'w')
-#tosave = open('../www/index.html', 'w')
-tosave.write(header.encode('utf-8'))
+save_html = open('../public_html/index.html', 'w')
+save_html.write(header.encode('utf-8'))
 for photo in photos:
   photo_entry = entry % { 
     'ownername':  photoset['ownername'],
@@ -97,6 +96,10 @@ for photo in photos:
     'tags': photo['tags'],
     'datetaken': re.sub('\s\d\d:\d\d:\d\d', '', photo['datetaken'],)
     }
-  tosave.write(photo_entry.encode('utf-8'))
-tosave.write(footer)
-tosave.close
+  save_html.write(photo_entry.encode('utf-8'))
+save_html.write(footer)
+save_html.close
+
+save_json = open('../public_html/geeklatte_all.json', 'w')
+save_json.write(data)
+save_json.close
