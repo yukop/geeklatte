@@ -7,9 +7,22 @@ import re
 import apikey
 
 URL = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey.APIKEY + '&photoset_id=72157628494205581&extras=date_taken%2Ctags%2Curl_s%2Curl_o&format=json&nojsoncallback=1'
-
 f = urllib2.urlopen(URL)
 data = f.read()
+
+save_json = open('../public_html/geeklatte_all.json', 'w')
+save_json.write(data)
+save_json.close
+
+URL2 = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey.APIKEY + '&photoset_id=72157628494205581&extras=date_taken%2Ctags%2Curl_s%2Curl_o&format=json&jsoncallback=getGeeklatte'
+f = urllib2.urlopen(URL2)
+data2 = f.read()
+
+save_jsonp = open('../public_html/geeklatte_all.js', 'w')
+save_jsonp.write(data2)
+save_jsonp.close
+
+
 dictFromJson = json.loads(data)
 photoset = dictFromJson['photoset']
 photos = photoset['photo']
@@ -100,6 +113,4 @@ for photo in photos:
 save_html.write(footer)
 save_html.close
 
-save_json = open('../public_html/geeklatte_all.json', 'w')
-save_json.write(data)
-save_json.close
+
