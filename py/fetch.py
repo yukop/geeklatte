@@ -85,12 +85,31 @@ This is why I make this series of "geek" latte art.
 <li><a id="tw" href="https://twitter.com/yukop">@yukop on Twitter</a></li>
 <li><a id="fr" href="http://www.flickr.com/photos/yukop/">yukop on Flickr</a></li>
 <li><a id="gh" href="https://github.com/yukop/">yukop on Github</a></li>
+<li><a id="in">Share Link</a></li>
 </ul>
-</div>
 
 </div>
-
 </div>
+</div>
+<script>
+$(function(){
+  $('.filterBox').incrementalFilter('.latte');
+
+    window.Intent = window.Intent || window.WebKitIntent;
+    window.navigator.startActivity = window.navigator.startActivity || window.navigator.webkitStartActivity;
+    window.intent = window.intent || window.webkitIntent;
+
+    $("#in").click(setIntent)
+    function setIntent(){
+      var intent = new Intent(
+          "http://webintents.org/share",
+          "text/uri-list",
+          "http://geeklatte.com");
+      window.navigator.startActivity(intent);
+      return false;
+    };
+});
+</script>
 </body>
 </html>
 '''
