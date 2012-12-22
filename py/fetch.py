@@ -4,7 +4,6 @@
 import urllib2
 import json
 import re
-import apikey
 import ConfigParser
 
 config = ConfigParser.ConfigParser()
