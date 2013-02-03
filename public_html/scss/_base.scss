@@ -1,0 +1,98 @@
+//======================================
+// base
+//======================================
+
+//layout
+$large-latte-size: 604px;
+$latte-size: 160px;
+$latte-margin: 4px;
+$m1: 20px;
+$b1: 1px;
+$body-width: ($latte-size * 6) + ($latte-margin * 12) + ($b1 * 12);
+$latte1: $latte-size;
+$latte2: ($latte-size * 2) + ($latte-margin * 4) + ($b1 * 4);
+$latte3: ($latte-size * 3) + ($latte-margin * 6) + ($b1 * 6);
+$latte4: ($latte-size * 4) + ($latte-margin * 8) + ($b1 * 8);
+$latte5: ($latte-size * 5) + ($latte-margin * 10) + ($b1 * 10);
+$content-unit-width: ($body-width - ($m1 * 3)) / 2;
+
+//color
+$white: #ffffff;
+$coffee: #583822;
+$aulait: #f4ebd6; 
+$orange: #f8c992;
+
+//font
+$sans: Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+$ja-sans: 'ヒラギノ角ゴ ProN W3','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,verdana,'ＭＳ Ｐゴシック',sans-serif;
+$mono: monospace;
+@font-face {
+  font-family: 'AlteHaasGroteskBold';
+  src: url('http://geeklatte.com/font/AlteHaasGroteskBold.ttf') format('truetype');
+}
+@import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
+.altehaasgroteskbold {
+  font-family: AlteHaasGroteskBold, Arial, sans-serif;    
+}
+.berkshire {
+  font-family: 'Berkshire Swash', cursive;
+}
+
+//styles
+.reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+.hide {
+  display: block;
+  position: absolute;
+  text-indent: -1000px;
+}
+
+
+/* base elements */
+div, p, h1, footer, a img {
+  @extend .reset;
+}
+a, a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: none;
+}
+img {
+  vertical-align: bottom;
+}
+
+/* base layout */
+.loading {
+  .hide-on-js {
+      opacity: 0;
+  }
+}
+
+body {
+  font-family: $ja-sans;
+  font-size: small;
+	margin: 2px;
+}
+body, html {
+  @extend .reset;
+}
