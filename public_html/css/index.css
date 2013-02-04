@@ -64,16 +64,14 @@ body {
   posigion: relative;
   color: #583822; }
 
-/*
 .gradientbg {
-  background-color: $aulait;
-  background: -moz-linear-gradient(315deg, $white 25%, $aulait 25%, $aulait 50%, $white 50%, $white 75%, $aulait 75%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, $white), color-stop(0.25, $white), color-stop(0.25, $aulait), color-stop(0.50, $aulait), color-stop(0.50, $white), color-stop(0.75, $white), color-stop(0.75, $aulait), color-stop(1, $aulait));
+  background-color: #f4ebd6;
+  background: -moz-linear-gradient(315deg, white 25%, #f4ebd6 25%, #f4ebd6 50%, white 50%, white 75%, #f4ebd6 75%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, white), color-stop(0.25, white), color-stop(0.25, #f4ebd6), color-stop(0.5, #f4ebd6), color-stop(0.5, white), color-stop(0.75, white), color-stop(0.75, #f4ebd6), color-stop(1, #f4ebd6));
   -moz-background-size: 60px 60px;
   -webkit-background-size: 60px 60px;
-  background-size: 60px 60px;
-}
-*/
+  background-size: 60px 60px; }
+
 /* header */
 .pageTitle {
   position: absolute;
