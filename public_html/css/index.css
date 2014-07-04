@@ -3,7 +3,7 @@
   src: url("http://geeklatte.com/font/AlteHaasGroteskBold.ttf") format("truetype"); }
 
 @import url(http://fonts.googleapis.com/css?family=Berkshire+Swash);
-.altehaasgroteskbold, .pageTitle {
+.altehaasgroteskbold, h1.pageTitle {
   font-family: AlteHaasGroteskBold, Arial, sans-serif; }
 
 .berkshire, .title {
@@ -20,19 +20,20 @@
   font-style: normal;
   font-weight: normal; }
 
-.cf:before, .body:before, .footer:before,
+.cf:before, .body:before, .header:before, .footer:before,
 .cf:after,
 .body:after,
+.header:after,
 .footer:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.cf:after, .body:after, .footer:after {
+.cf:after, .body:after, .header:after, .footer:after {
   clear: both; }
 
-.cf, .body, .footer {
+.cf, .body, .header, .footer {
   *zoom: 1; }
 
 .hide {
@@ -41,12 +42,20 @@
   text-indent: -1000px; }
 
 /* base elements */
-a, a:-webkit-any-link {
-  cursor: pointer;
-  text-decoration: none; }
-
 img {
   vertical-align: bottom; }
+
+a, a:link {
+  color: #da7602;
+  text-decoration: none; }
+
+a:visited {
+  color: #b16103;
+  text-decoration: none; }
+
+a:hover, a:active {
+  color: #f19a35;
+  text-decoration: none; }
 
 /* base layout */
 .loading .hide-on-js {
@@ -61,7 +70,7 @@ body {
 .body {
   max-width: 1020px;
   margin: 0 auto;
-  posigion: relative;
+  position: relative;
   color: #583822; }
 
 .gradientbg {
@@ -73,7 +82,10 @@ body {
   background-size: 60px 60px; }
 
 /* header */
-.pageTitle {
+.header {
+  min-height: 83px; }
+
+h1.pageTitle {
   position: absolute;
   top: -40px;
   z-index: -1;

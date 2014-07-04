@@ -7,7 +7,7 @@
   @extend .cf;
   max-width: $body-width;
   margin: 0 auto;
-  posigion: relative;
+  position: relative;
   color: $coffee;
 }
 
@@ -21,7 +21,11 @@
 }
 
 /* header */
-.pageTitle {  
+.header {
+  min-height: 83px;
+  @extend .cf;
+}
+h1.pageTitle {  
   position: absolute;
   top: -40px;
   z-index: -1;

@@ -11,21 +11,14 @@ config = ConfigParser.ConfigParser()
 config.readfp(open('geeklatte.conf'))
 apikey = config.get('Flickr', 'apikey')
 
-URL = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey + '&photoset_id=72157628494205581&extras=date_taken%2Ctags%2Curl_s%2Curl_o&format=json&nojsoncallback=1'
+URL = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey + '&photoset_id=72157628494205581&extras=date_taken%2Ctags%2Curl_s%2Curl_o&format=json&nojsoncallback=1'
+
 f = urllib2.urlopen(URL)
 data = f.read()
 
 save_json = open('../public_html/geeklatte_all.json', 'w')
 save_json.write(data)
 save_json.close
-
-URL2 = 'http://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=' + apikey + '&photoset_id=72157628494205581&extras=date_taken%2Ctags%2Curl_s%2Curl_o&format=json&jsoncallback=getGeeklatte'
-f = urllib2.urlopen(URL2)
-data2 = f.read()
-
-save_jsonp = open('../public_html/geeklatte_all.js', 'w')
-save_jsonp.write(data2)
-save_jsonp.close
 
 
 env = Environment(loader = FileSystemLoader('../templates'))

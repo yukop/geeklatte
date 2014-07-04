@@ -21,6 +21,9 @@ $white: #ffffff;
 $coffee: #583822;
 $aulait: #f4ebd6; 
 $orange: #f8c992;
+$link: #da7602;
+$alink: #f19a35;
+$vlink: #b16103;
 
 //font
 $sans: Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
@@ -73,12 +76,20 @@ $mono: monospace;
 div, p, h1, footer, a img {
   @extend .reset;
 }
-a, a:-webkit-any-link {
-  cursor: pointer;
-  text-decoration: none;
-}
 img {
   vertical-align: bottom;
+}
+a, a:link {
+  color: $link;
+  text-decoration: none;
+}
+a:visited {
+  color: $vlink;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: $alink;
+  text-decoration: none;
 }
 
 /* base layout */
